@@ -43,21 +43,21 @@ function App() {
   };
   const [user, setUser] = useState(Object.values(users))
   let [currentUser, setCurrentUser] = useState(0)
-
+  console.log(setUser)
   const handlePrev = () => { 
-    (currentUser === 0) ? setCurrentUser(user.length - 1) : setCurrentUser(currentUser - 1)
-  }
-  const handleNext = () => { 
     (currentUser === user.length - 1) ? setCurrentUser(0) : setCurrentUser(currentUser + 1)
   }
+  const handleNext = () => {  
+    (currentUser === 0) ? setCurrentUser(user.length - 1) : setCurrentUser(currentUser - 1)
+  }
   return (
-    <main className="font-body">
-      <MainCircle user={user} currentUser={currentUser} />
-      <div className="grid grid-cols-3 place-items-center transform translate-x-[35rem] translate-y-[19rem] w-fit">
-          <img src={arrowImage} alt="" width={30} onClick={handlePrev} className="hover:cursor-pointer"/>
+    <main className="font-body w-[100%] overflow-x-hidden pb-20">
+      <MainCircle user={user} currentUser={currentUser}/>
+      <div className="grid grid-cols-3 place-items-center absolute top-[40%] left-0 right-0 m-auto md:w-fit md:left-[28rem] md:top-[52%]">
+          <img src={arrowImage} alt="" width={30} onClick={handlePrev} className="hover:cursor-pointer z-[1000]"/>
           <div className="grid place-content-center w-fit">
-          <img src={user[currentUser].imageUrl} alt="" width={200}  />
-          <Button bgColor='primary-light ml-6 mt-8 rounded-lg transform translate-x-[-5%]' text={user[currentUser].name}/>
+          <img src={user[currentUser].imageUrl} alt="" width={200}  className="z-[1000]"/>
+          <Button bgColor='primary-light ml-6 mt-8 rounded-lg transform translate-x-[-5%] md:w-48' text={user[currentUser].name}/>
           </div>     
           <img src={arrowImage} alt="" width={30} onClick={handleNext} className="hover:cursor-pointer z-[1000] " />
       </div>
