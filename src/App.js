@@ -57,7 +57,7 @@ function App() {
           <img src={arrowImage} alt="" width={30} onClick={handlePrev} className="hover:cursor-pointer z-[1000]"/>
           <div className="grid place-content-center w-fit">
           <img src={user[currentUser].imageUrl} alt="" width={200}  className="z-[1000]"/>
-          <Button bgColor='primary-light ml-6 mt-8 rounded-lg transform translate-x-[-5%] md:w-48' text={user[currentUser].name}/>
+          <Button bgColor='primary-light ml-6 mt-8 rounded-lg transform translate-x-[-5%] md:w-48' color='#C5F8C7' text={user[currentUser].name}/>
           </div>     
           <img src={arrowImage} alt="" width={30} onClick={handleNext} className="hover:cursor-pointer z-[1000] " />
       </div>
