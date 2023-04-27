@@ -93,6 +93,7 @@ function Modal({ modal, user, closeModal }) {
         <input 
           type="datetime-local" 
           name="date"
+          placeholder="mm/dd/yyyy hh:mm:ss"
           className={`w-full focus:outline-none focus:shadow-outline pb-4 pt-1 px-2.5 sm:pt-2 sm:pb-5 rounded-[5px] hover:border-gray-500 border ${isSelected ? "text-black" : "text-gray-400"}`}
           value={form.date}
           onChange={handleSelectOption}  
