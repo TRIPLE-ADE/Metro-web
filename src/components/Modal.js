@@ -12,6 +12,7 @@ function Modal({ modal, user, closeModal }) {
   }
   const [isSelected, setIsSelected] = useState(false);
   const [form, setForm] = useState(initialValues);
+  const [message, setMessage] = useState(false)
   
   const handleFormChange = (event) => {
     let name = event.target.name;
@@ -34,14 +35,15 @@ function Modal({ modal, user, closeModal }) {
     addDoc(dbRef, form)
       //using docRef created 
       .then(docRef => {
-        alert("Document has been added successfully");
+        setMessage(true)
+        setTimeout(() => closeModal(), 1000) 
       })
       //error handler
       .catch(error => {
         console.log(error);
       })
-
-    setForm(initialValues)
+      
+      setForm(initialValues)
   }
 
   return (
@@ -53,6 +55,7 @@ function Modal({ modal, user, closeModal }) {
           modal ? "flex" : "hidden"
         } flex-col gap-4 fixed left-0 right-0 top-0 bottom-0 m-auto w-[90%] sm:w-[40%] h-[500px] min-w-[250px] box-shadow bg-primary-deep z-[1000] p-5  sm:p-10 rounded-md`}
       >
+      <p className={`text-white font-bold ${message ? 'inline' : 'hidden'}`}>Mentor Successfully successfully booked</p>
         <input
           type="text"
           name="name"
