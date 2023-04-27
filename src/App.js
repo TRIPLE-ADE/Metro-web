@@ -9,6 +9,7 @@ import ankitaImage from "./image/ankita.png";
 import sauravImage from "./image/saurav.png";
 import { useState } from "react";
 import Modal from "./components/Modal";
+
 function App() {
   const users = {
     user1: {
