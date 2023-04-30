@@ -2,7 +2,7 @@ import { useState } from "react";
 import {db} from "../firebase"
 import { addDoc, collection } from "@firebase/firestore";
 
-function Modal({ modal, user, closeModal, message, setMessage  }) {
+function Modal({ modal, user, closeModal, message, setMessage }) {
   const initialValues = {
     name:'',
     email:'',
@@ -48,7 +48,7 @@ function Modal({ modal, user, closeModal, message, setMessage  }) {
 
   return (
     <>
-      <formgit
+      <form
         action=""
         onSubmit={handleSubmit}
         className={`${
