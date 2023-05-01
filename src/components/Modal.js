@@ -157,8 +157,8 @@ function Modal({ modal, user, closeModal, message, setMessage, isLoading, setIsL
           onChange={handleFormChange}>
           </textarea>
           <div className="flex justify-between">
-            <button type="submit" disabled={isLoading ? true : false} className="bg-primary-light rounded-sm px-4 py-1 w-24 hover:text-primary-dark">Submit</button>
-            <button onClick={closeModal} disabled={isLoading ? true : false} className="bg-primary-light rounded-sm px-4 py-1 w-24 hover:text-primary-dark">Close</button>
+            <button onClick={closeModal} disabled={isLoading ? true : false} className="bg-gray-300 rounded-sm px-4 py-1 w-24 font-medium hover:text-primary-deep">Close</button>
+            <button type="submit" disabled={isLoading ? true : false} className="bg-primary-light rounded-sm px-4 py-1 w-24 font-medium hover:text-primary-deep">Submit</button>
           </div>
           <FaCircleNotch className={`${isLoading ? 'block' : 'hidden'} text-4xl absolute top-0 left-0 right-0 bottom-0 m-auto animate-spin text-primary-dark`}/>
       </form>
