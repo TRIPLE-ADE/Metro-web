@@ -16,7 +16,7 @@ function App() {
       name: "Prankur Gupta",
       imageUrl: prankurImage,
       position: "SDE @Amazon",
-      intro: "I am Prankur Gupta, I am working as a Software Development Engineer at Amazon. I can guide you throughout your preparation phase. Trust me when I tell you this I know the exact recipe to crack the coding interview rounds of top companies for the SDE role.",
+      intro:"I am Prankur Gupta, I am working as a Software Development Engineer at Amazon. I can guide you throughout your preparation phase. Trust me when I tell you this I know the exact recipe to crack the coding interview rounds of top companies for the SDE role.",
     },
     user2: {
       name: "Saurav Pal",
@@ -47,6 +47,7 @@ function App() {
   let [currentUser, setCurrentUser] = useState(0);
   const [modal, setModal] = useState(false);
   const [message, setMessage] = useState(false)
+  const [isLoading, setIsLoading] = useState(false);
 
   const handlePrev = () => {
     setUser(user)(currentUser === user.length - 1)
@@ -64,6 +65,7 @@ function App() {
   const closeModal = () => {
     setModal(false);
     setMessage(false)
+    setIsLoading(false)
   };
 
   return (
@@ -109,7 +111,7 @@ function App() {
           handleModal={handleModal}
         />
       </main>
-      <Modal modal={modal} user={user} closeModal={closeModal} message={message} setMessage={setMessage} />
+      <Modal modal={modal} user={user} closeModal={closeModal} message={message} setMessage={setMessage} isLoading={isLoading} setIsLoading={setIsLoading}/>
     </>
   );
 }
