@@ -50,7 +50,8 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
 
   const handlePrev = () => {
-    setUser(user)(currentUser === user.length - 1)
+    setUser(user)
+    currentUser === user.length - 1
       ? setCurrentUser(0)
       : setCurrentUser(currentUser + 1);
   };
