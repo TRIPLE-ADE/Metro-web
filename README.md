@@ -2,12 +2,12 @@
 # A React Mentor Booking App
 
 # Built with
-Tailwind CSS - For styles
-Flexbox
-CSS Grid
-Mobile-first workflow
-React JS
-Firebase Database
+- Tailwind CSS
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- React JS
+- Firebase Database
 
 # Getting Started with Create React App
 
