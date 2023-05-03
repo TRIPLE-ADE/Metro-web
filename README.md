@@ -1,6 +1,14 @@
 # Metro-web 
 # A React Mentor Booking App
 
+# Built with
+Tailwind CSS - For styles
+Flexbox
+CSS Grid
+Mobile-first workflow
+React JS
+Firebase Database
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
